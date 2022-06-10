@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Accessing Elements in the DOM</title>
+
+</head>
+
+<body>
+
+    <div id="demo">Access me by ID</div>
+    <input type="button" onclick="myfuction();" name="turnItOn" value="CLICK" />
+    <br>
+    <div class="demo">Access me by class</div>
+    <input type="button" onclick="myfuction1();" name="turnItOn1" value="CLICK" />
+    <br>
+
+    <article>Access me by tag</article>
+    <input type="button" onclick="myfuction2();" name="turnItOn2" value="CLICK" />
+    <br>
+
+    <script>
+
+
+        function myfuction() {
+            const ele = document.getElementById('demo');
+            ele.replaceWith('Accesed by id');
+
+        }
+        function myfuction1() {
+            const demoClass = document.getElementsByClassName('demo');
+            for (i = 0; i < demoClass.length; i++) {
+                demoClass[i].replaceWith('Accesed by class');
+            }
+
+
+
+
+        }
+        function myfuction2() {
+            const demoTag = document.getElementsByTagName('article');
+
+            for (i = 0; i < demoTag.length; i++) {
+                demoTag[i].replaceWith('Accessed by tag');
+            }
+
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

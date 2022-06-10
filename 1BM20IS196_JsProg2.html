@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <title>JS Program 2</title>
+    <head>
+        <script type="text/javascript">
+            function validate(){
+                strV=strForm.card.value.search(/^[0-9]{16}$/);/*restricing the length to 16 digits*/
+                if(strV==-1){
+                    alert("Not Valid");
+                }else{
+                    alert("valid");
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+    <form name="strForm" onsubmit="validate();">
+        <label><b>Enter your 16 digit credit card number</b></label>
+        <input type="text" name="card">
+        <input type="submit" value="submit">        
+    </form>
+    </body>
+</html>

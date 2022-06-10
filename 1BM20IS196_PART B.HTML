@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Event Handling Form</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+        input[type=text]{
+            width: 75%;
+            height: 25px;
+            border-radius: 5px;
+            border-color: blue;
+            padding: 18px;
+        }
+        h1 {
+            color: maroon;
+            margin-left: 40px;
+        }
+        button{
+            width: 25%;
+            padding: 10px;
+            background-color: rgb(80, 218, 80);
+        }
+        button:hover{
+            background-color: red;
+            color: white;
+        }
+        .box{
+            padding: 20px;
+            padding-right: 1px;
+            width: 50%;
+            background-color: #f7786b;
+            border-radius: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="text-align: center; color: hotpink;">Student registration form</h1>
+    <div class="box">
+    <form>
+        <label for="name"><b>Enter your Name:</b></label>
+        <input type="text" id="name" name="name" placeholder="xyz">
+        <br>
+        <label for="email"><b>Enter your Email:</b></label>
+        <input type="text" id="email" name="email" placeholder="xyz@gmail.com">
+        <br>
+        <label for="phone"><b>Enter your Phone:</b></label>
+        <input type="text" id="phone" name="phone" placeholder="+91">
+        <br>
+        <label for="address"><b>Enter your Address:</b></label>
+        <input type="text" id="address" name="address" placeholder="Banga....">
+        <br>
+        <label for="city"><b>Enter your City:</b></label>
+        <input type="text" id="city" name="city" placeholder="Ba....">
+        <br>
+        <label for="state"><b>Enter your State:</b></label>
+        <input type="text" id="state" name="state" placeholder="Karnataka">
+        <br>
+        <label for="zip"><b>Enter your Zip:</b></label>
+        <input type="text" id="zip" name="zip" placeholder="560019">
+        <br>
+        <label for="country"><b>Enter your Country:</b></label>
+        <input type="text" id="country" name="country" placeholder="India">
+        <br>
+        <br>
+    </form>
+    
+    <div class="but">
+    <button onclick="reset()">Reset</button>
+    <button onclick="submit()">Submit</button>
+    </div>
+</div>
+    <script>
+     
+        function reset() {
+            alert("Resetted");
+        }
+      
+        function submit() {
+            alert("Submitted");
+        }
+    </script>
+</body>
+
+</html>

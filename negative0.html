@@ -1,0 +1,16 @@
+<script>
+    var arr = [];
+    var size = 4;
+    for (var i = 0; i < size; i++)
+        arr[i] = prompt("Enter element ", i + 1);
+    var pos = 0, neg = 0, zer = 0;
+    for (var i = 0; i < size; i++) {
+        if (arr[i] > 0)
+            pos++;
+        else if (arr[i] < 0)
+            neg++;
+        else
+            zer++;
+    }
+    document.write("<br>Positive =" + pos + " Negetive= " + neg + "zero= " + zer);
+</script>

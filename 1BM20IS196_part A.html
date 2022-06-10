@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling</title>
+    <style>
+        body{
+            padding-left:30%;
+            background-color: #50394c;
+        }
+        input[type=text]{
+            width: 75%;
+            height: 25px;
+            border-radius: 5px;
+            border-color: blue;
+        }
+        
+        button{
+            width: 25%;
+            padding: 10px;
+            background-color: rgb(80, 218, 80);
+        }
+        button:hover{
+            background-color: red;
+            color: white;
+        }
+        .box{
+            padding: 20px;
+            padding-right: 1px;
+            width: 50%;
+            background-color: #f7786b;
+            border-radius: 15px;
+        }
+        .but{
+            padding-left: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <form>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <br>
+        <br>
+        <label for="b">Bulb:</label>
+        <br>
+        <input type="checkbox" id="b" name="b" value="100w">Four 100-watt light bulbs for $2.39
+        <br>
+        <input type="checkbox" id="b" name="b" value="100w">Eight 100-watt light bulbs for $4.29
+        <br>
+        <input type="checkbox" id="b" name="b" value="100w">Four 100-watt, long-life light bulbs for $3.95
+        <br>
+        <input type="checkbox" id="b" name="b" value="100w">Eight 100-watt, long-life light bulbs for $7.49
+        <br>
+
+        <br>
+        <label for="payment">Card:</label><br>
+        <input type="radio" id="payment" name="payment" value="visa">Visa
+        <br>
+        <input type="radio" id="payment" name="payment" value="mastercard">MasterCard
+        <br>
+        <input type="radio" id="payment" name="payment" value="discover">Discover
+        <br>
+        
+    </form>
+    <br>
+    <div class="but">
+    <button onclick="reset()">Reset</button>
+    <button onclick="submit()">Submit</button>
+    </div>
+    <script>
+        function reset() {
+           alert("reseted");
+        }
+        function submit() {
+            alert("submitted");
+        }
+    </script>   
+    </div>
+</body>
+</html>

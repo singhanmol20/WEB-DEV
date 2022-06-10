@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <title>JS Program 1</title>
+    <head>
+        <script type="text/javascript">
+            function validate(){
+                strV=strForm.email.value.search(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/);
+                if(strV==-1){
+                    alert("Not Valid");
+                }else{
+                    alert("valid");
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+    <form name="strForm" onsubmit="validate();">
+        <label><b>Enter your email address</b></label>
+        <input type="text" name="email">
+        <input type="submit" value="submit">        
+    </form>
+    </body>
+</html>

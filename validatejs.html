@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <script type="text/javascript">
+        function validate() {
+            //Validating Student Name
+            nameValidate1 = SignUpForm.StudentName.value.search(/[a-zA-Z]+\s?\.\s?[a-zA-Z]+/);
+            if (nameValidate1 == -1) {
+                nameValidate2 = SignUpForm.StudentName.value.search(/[A-Z]+/i);
+                if (nameValidate2 == -1) {
+                    alert("Please Enter Valid Name");
+                    document.SignUpForm.StudentName.focus();
+                    alert("Please Enter Name");
+                    return false;
+                }
+            }
+            console.log(nameValidate1);
+
+            //Validating USN 
+            usnValidate = SignUpForm.USN.value.search(/1BM20IS[0-9]{3}/i);
+            if (usnValidate == -1) {
+                alert("Please Enter Valid USN Number");
+                document.SignUpForm.USN.focus();
+                return false;
+            }
+
+            //Validating Mobile Number
+            mobileValidate = SignUpForm.Mobile.value.search(/\d{10}/);
+            if (mobileValidate == -1) {
+                alert("Please Enter Valid Mobile Number");
+                document.SignUpForm.Mobile.focus();
+                return false;
+            }
+
+            alert("Submitted Valid Name, USN and Mobile Number");
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1> Sign Up Page </h1>
+        <form name="SignUpForm" action="" onsubmit="validate();" >
+            <table>
+                <tr>
+                    <td align="right"> <label> <b> Student Name </b> </label> </td>
+                    <td> <input type="text" name="StudentName" /> </td>
+                </tr>
+                <tr>
+                    <td align="right"> <label> <b>USN </b></label> </td>
+                    <td> <input type="text" name="USN" /> </td>
+                </tr>
+                <tr>
+                    <td align="right"> <label><b> Mobile </b></label></td>
+                    <td> <input type="text" name="Mobile" /> </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit" />
+        </form>
+    </center>
+</body>
+
+</html>

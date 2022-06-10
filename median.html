@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script type="text/javascript">
+        var arrayName = [3, 2, 1, 6, 9, 5, 4];
+        arrayName.sort();
+        var half = Math.floor(arrayName.length / 2);
+        document.write(half);
+        if (arrayName.length % 2 != 0)
+            document.write("<br>"+arrayName[half]);
+        else
+            document.write("<br>"+(arrayName[half - 1] + arrayName[half]) / 2.0);
+    </script>
+</body>
+
+</html>
